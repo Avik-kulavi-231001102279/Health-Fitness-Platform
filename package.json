@@ -1,0 +1,27 @@
+{
+  "name": "fitlife-pro",
+  "version": "1.0.0",
+  "description": "FitLife Pro — AI-Powered Lifestyle Optimization & Wellness Platform",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix backend test",
+    "seed": "npm --prefix backend run seed",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install"
+  },
+  "keywords": [
+    "fitness",
+    "wellness",
+    "lifestyle",
+    "nutrition",
+    "ai",
+    "gemini",
+    "mifflin-st-jeor",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "FitLife Pro Team",
+  "license": "MIT"
+}
