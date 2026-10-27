@@ -19,8 +19,8 @@ export default function Profile() {
     height: user?.height || 175,
     weight: user?.weight || 70,
     targetWeight: user?.targetWeight || 68,
-    fitnessGoal: user?.fitnessGoal || 'Build Muscle',
-    activityLevel: user?.activityLevel || 'Moderately Active',
+    fitnessGoal: user?.fitnessGoal || 'Improve fitness',
+    activityLevel: user?.activityLevel || 'Moderately active',
     workoutExperience: user?.workoutExperience || 'Intermediate',
     foodPreference: user?.foodPreference || 'Non-Vegetarian'
   });
@@ -133,12 +133,12 @@ export default function Profile() {
           <div className="space-y-3 text-xs">
             <div className="flex justify-between items-center p-3 rounded-xl bg-gray-50 dark:bg-dark-900/50">
               <span className="text-gray-400">Primary Goal:</span>
-              <strong className="text-primary-600 dark:text-primary-400 text-sm">{user?.fitnessGoal || 'Build Muscle'}</strong>
+              <strong className="text-primary-600 dark:text-primary-400 text-sm">{user?.fitnessGoal || 'Improve fitness'}</strong>
             </div>
 
             <div className="flex justify-between items-center p-3 rounded-xl bg-gray-50 dark:bg-dark-900/50">
               <span className="text-gray-400">Activity Level:</span>
-              <strong>{user?.activityLevel || 'Moderately Active'}</strong>
+              <strong>{user?.activityLevel || 'Moderately active'}</strong>
             </div>
 
             <div className="flex justify-between items-center p-3 rounded-xl bg-gray-50 dark:bg-dark-900/50">
@@ -241,11 +241,11 @@ export default function Profile() {
                   onChange={(e) => setEditForm({ ...editForm, fitnessGoal: e.target.value })}
                   className="input text-xs"
                 >
-                  <option value="Lose Weight">Lose Weight</option>
-                  <option value="Build Muscle">Build Muscle</option>
-                  <option value="Improve Fitness">Improve Fitness</option>
-                  <option value="Stay Healthy">Stay Healthy</option>
-                  <option value="Improve Endurance">Improve Endurance</option>
+                  <option value="Gradual weight loss">Gradual Weight Loss</option>
+                  <option value="Build strength">Build Strength</option>
+                  <option value="Maintain weight">Maintain Weight</option>
+                  <option value="Improve fitness">Improve Fitness</option>
+                  <option value="Gradual weight gain">Gradual Weight Gain</option>
                 </select>
               </div>
 
@@ -257,10 +257,9 @@ export default function Profile() {
                   className="input text-xs"
                 >
                   <option value="Sedentary">Sedentary</option>
-                  <option value="Lightly Active">Lightly Active</option>
-                  <option value="Moderately Active">Moderately Active</option>
-                  <option value="Very Active">Very Active</option>
-                  <option value="Athlete">Athlete</option>
+                  <option value="Lightly active">Lightly Active</option>
+                  <option value="Moderately active">Moderately Active</option>
+                  <option value="Very active">Very Active</option>
                 </select>
               </div>
 

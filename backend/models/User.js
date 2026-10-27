@@ -90,4 +90,29 @@ const userSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
+// ─── Normalize legacy enum values before validation ───
+const fitnessGoalMap = {
+  'Lose Weight': 'Gradual weight loss',
+  'Build Muscle': 'Build strength',
+  'Stay Healthy': 'Maintain weight',
+  'Improve Fitness': 'Improve fitness',
+  'Improve Endurance': 'Gradual weight gain'
+};
+const activityLevelMap = {
+  'Lightly Active': 'Lightly active',
+  'Moderately Active': 'Moderately active',
+  'Very Active': 'Very active',
+  'Athlete': 'Very active'
+};
+
+userSchema.pre('validate', function (next) {
+  if (this.fitnessGoal && fitnessGoalMap[this.fitnessGoal]) {
+    this.fitnessGoal = fitnessGoalMap[this.fitnessGoal];
+  }
+  if (this.activityLevel && activityLevelMap[this.activityLevel]) {
+    this.activityLevel = activityLevelMap[this.activityLevel];
+  }
+  next();
+});
+
 module.exports = mongoose.model('User', userSchema);
