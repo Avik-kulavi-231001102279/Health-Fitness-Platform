@@ -1,15 +1,5 @@
 # FitLife Pro
 
-
-
-
-
-
-
-
-
-
-
 > **"Optimize Your Habits. Transform Your Life."**
 
 FitLife Pro is a production-oriented, full-stack lifestyle optimization and wellness platform powered by AI. It helps users track daily nutrition, calories, hydration, workouts, sleep, habits, goals, and personal progress with scientific precision and clinical guardrails.
